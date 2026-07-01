@@ -2,6 +2,43 @@ import { animate, inView, scroll, stagger } from "https://cdn.jsdelivr.net/npm/m
 
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+const siteHeader = document.querySelector(".site-header");
+const menuToggle = document.querySelector(".menu-toggle");
+const siteMenu = document.querySelector("#site-menu");
+
+if (siteHeader && menuToggle && siteMenu) {
+    const setMenuOpen = (isOpen) => {
+        siteHeader.classList.toggle("nav-open", isOpen);
+        menuToggle.setAttribute("aria-expanded", String(isOpen));
+        menuToggle.setAttribute("aria-label", isOpen ? "Закрыть меню" : "Открыть меню");
+    };
+
+    menuToggle.addEventListener("click", (event) => {
+        event.stopPropagation();
+        setMenuOpen(!siteHeader.classList.contains("nav-open"));
+    });
+
+    siteMenu.addEventListener("click", (event) => {
+        event.stopPropagation();
+    });
+
+    siteMenu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => setMenuOpen(false));
+    });
+
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+            setMenuOpen(false);
+        }
+    });
+
+    document.addEventListener("click", (event) => {
+        if (siteHeader.classList.contains("nav-open") && !siteHeader.contains(event.target)) {
+            setMenuOpen(false);
+        }
+    });
+}
+
 if (!prefersReducedMotion) {
     document.documentElement.classList.add("motion-ready");
 
@@ -91,7 +128,7 @@ if (!prefersReducedMotion) {
             });
         });
 
-        document.querySelectorAll(".button, .header-call, .nav-links a, .service-action").forEach((control) => {
+        document.querySelectorAll(".button, .header-call, .menu-toggle, .nav-links a, .service-action").forEach((control) => {
             control.addEventListener("pointerdown", () => {
                 animate(control, { scale: .975 }, { duration: .12, ease: "easeOut" });
             });

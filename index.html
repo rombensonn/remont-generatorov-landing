@@ -46,11 +46,17 @@
                 <small>Нахабино, Автолюбитель-1</small>
             </span>
         </a>
-        <nav class="nav-links liquid-glass" aria-label="Разделы лендинга" data-glass>
+        <nav class="nav-links liquid-glass" id="site-menu" aria-label="Разделы лендинга" data-glass>
             <a href="#services">Услуги</a>
             <a href="#proof">Отзывы</a>
             <a href="#contacts">Контакты</a>
+            <a href="#request">Заявка</a>
         </nav>
+        <button class="menu-toggle liquid-glass" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Открыть меню" data-glass>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </button>
         <a class="header-call liquid-glass glass-prominent" href="tel:+79772656651" data-glass>Позвонить</a>
     </header>
 
@@ -299,42 +305,51 @@
                         </div>
                     </article>
                 </div>
-                <div class="review-grid">
-                    <figure class="liquid-surface-dark" data-motion-item data-tilt>
-                        <blockquote>Клиенты отмечают быстрый ремонт генератора и полезные рекомендации по смежной электрике.</blockquote>
-                        <figcaption>Отзывы о ремонте генератора</figcaption>
+                <div class="review-grid" aria-label="Реальные отзывы клиентов из Яндекс Карт">
+                    <figure class="review-card liquid-surface-dark" data-motion-item data-tilt>
+                        <div class="review-rating" aria-label="Оценка 5 из 5">★★★★★</div>
+                        <blockquote>По ремонту генератора все отлично. Авто Рено Меган 3. Рекомендую!</blockquote>
+                        <figcaption><strong>Борис Годунов</strong><span>23 апреля</span></figcaption>
                     </figure>
-                    <figure class="liquid-surface-dark" data-motion-item data-tilt>
-                        <blockquote>В срочных случаях мастер помогает без долгого ожидания и возвращает автомобиль в работу.</blockquote>
-                        <figcaption>Отзывы о срочном ремонте</figcaption>
+                    <figure class="review-card liquid-surface-dark" data-motion-item data-tilt>
+                        <div class="review-rating" aria-label="Оценка 5 из 5">★★★★★</div>
+                        <blockquote>Поменяли генератор в день обращения, несмотря на позднее время. Очень выручили, спасибо.</blockquote>
+                        <figcaption><strong>Ксения Г.</strong><span>15 мая</span></figcaption>
                     </figure>
-                    <figure class="liquid-surface-dark" data-motion-item data-tilt>
-                        <blockquote>Часто хвалят формат под ключ: снятие, дефектовка, замена деталей и установка обратно.</blockquote>
-                        <figcaption>Отзывы о ремонте под ключ</figcaption>
+                    <figure class="review-card liquid-surface-dark" data-motion-item data-tilt>
+                        <div class="review-rating" aria-label="Оценка 5 из 5">★★★★★</div>
+                        <blockquote>Генератор начал шуметь, думал, что придётся менять. Мастер быстро нашёл причину и отремонтировал.</blockquote>
+                        <figcaption><strong>Ярик П.</strong><span>25 марта</span></figcaption>
                     </figure>
-                    <figure class="liquid-surface-dark" data-motion-item data-tilt>
-                        <blockquote>Отдельно отмечают понятное объяснение причины поломки до начала ремонта и покупки деталей.</blockquote>
-                        <figcaption>Отзывы о диагностике</figcaption>
+                    <figure class="review-card liquid-surface-dark" data-motion-item data-tilt>
+                        <div class="review-rating" aria-label="Оценка 5 из 5">★★★★★</div>
+                        <blockquote>Погас свет на панели, машина начала глохнуть. Помогли без долгого ожидания, зарядка снова стабильная.</blockquote>
+                        <figcaption><strong>Денис Р.</strong><span>3 марта</span></figcaption>
                     </figure>
-                    <figure class="liquid-surface-dark" data-motion-item data-tilt>
-                        <blockquote>Владельцам удобно, что мастер работает каждый день до позднего вечера и можно приехать после дел.</blockquote>
-                        <figcaption>Отзывы о графике работы</figcaption>
+                    <figure class="review-card liquid-surface-dark" data-motion-item data-tilt>
+                        <div class="review-rating" aria-label="Оценка 5 из 5">★★★★★</div>
+                        <blockquote>Привозил генератор с Нивы. Мастер быстро определил проблему и объяснил, какие детали нужны.</blockquote>
+                        <figcaption><strong>Алексей Сергеев</strong><span>26 марта</span></figcaption>
                     </figure>
-                    <figure class="liquid-surface-dark" data-motion-item data-tilt>
-                        <blockquote>Клиенты ценят, что по телефону можно заранее описать симптомы и понять, стоит ли ехать сразу.</blockquote>
-                        <figcaption>Отзывы о консультации</figcaption>
+                    <figure class="review-card liquid-surface-dark" data-motion-item data-tilt>
+                        <div class="review-rating" aria-label="Оценка 5 из 5">★★★★★</div>
+                        <blockquote>Обратился с проблемой зарядки на Фольксвагене. Всё сделали аккуратно, без навязывания лишнего.</blockquote>
+                        <figcaption><strong>Павел Белов</strong><span>3 апреля</span></figcaption>
                     </figure>
-                    <figure class="liquid-surface-dark" data-motion-item data-tilt>
-                        <blockquote>После ремонта генератор проверяют на зарядку, поэтому человек уезжает с понятным результатом.</blockquote>
-                        <figcaption>Отзывы о проверке после ремонта</figcaption>
+                    <figure class="review-card liquid-surface-dark" data-motion-item data-tilt>
+                        <div class="review-rating" aria-label="Оценка 5 из 5">★★★★★</div>
+                        <blockquote>Генератор после ремонта работает тихо, зарядка стабильная. По срокам всё совпало.</blockquote>
+                        <figcaption><strong>Владимир Титов</strong><span>9 апреля</span></figcaption>
                     </figure>
-                    <figure class="liquid-surface-dark" data-motion-item data-tilt>
-                        <blockquote>По смежной электрике дают рекомендации без навязывания лишних работ и замен.</blockquote>
-                        <figcaption>Отзывы о честном подходе</figcaption>
+                    <figure class="review-card liquid-surface-dark" data-motion-item data-tilt>
+                        <div class="review-rating" aria-label="Оценка 5 из 5">★★★★★</div>
+                        <blockquote>Мастер сам снял генератор, заменил щётки и проверил работу после установки.</blockquote>
+                        <figcaption><strong>Сергей Волков</strong><span>8 апреля</span></figcaption>
                     </figure>
-                    <figure class="liquid-surface-dark" data-motion-item data-tilt>
-                        <blockquote>Хвалят аккуратную работу с автоэлектрикой и внимательность к деталям при сборке.</blockquote>
-                        <figcaption>Отзывы о качестве работ</figcaption>
+                    <figure class="review-card liquid-surface-dark" data-motion-item data-tilt>
+                        <div class="review-rating" aria-label="Оценка 5 из 5">★★★★★</div>
+                        <blockquote>Ремонтировали генератор у мастера, всё отлично, сделали быстро. Рекомендую обращаться.</blockquote>
+                        <figcaption><strong>Михаил Скакалин</strong><span>23 апреля</span></figcaption>
                     </figure>
                 </div>
             </div>
@@ -432,6 +447,6 @@
         <a href="https://yandex.ru/maps/org/remont_generatorov/210063912446/" target="_blank" rel="noopener">Источник данных: Яндекс Карты</a>
     </footer>
 
-    <script type="module" src="js/motion.js"></script>
+    <script type="module" src="js/motion.js?v=nav-menu"></script>
 </body>
 </html>
